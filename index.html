@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta charset="utf-8">
+  <title>obs-mobile</title>
+  <style>
+    #preLoading {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    #preLoading i {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      border-top-color: #333;
+      border-left-color: #333;
+      border-right-color: #333;
+      animation: spinner-rotate 0.8s infinite linear;
+    }
+
+    @keyframes spinner-rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script>
+    function fixScreen() {
+      var fontSize = window.innerWidth * 40 / 375
+      document.documentElement.style.fontSize = fontSize + 'px'
+    }
+    window.addEventListener('resize', fixScreen)
+  </script>
+</head>
+<body onload="fixScreen()">
+  <div id="app">
+    <div id="preLoading">
+      <i></i>
+    </div>
+  </div>
+</body>
+</html>
