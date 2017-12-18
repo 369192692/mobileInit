@@ -1,0 +1,54 @@
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-blue: #4383fb;
+$color-blue-1: #539ffd;
+$color-blue-2: #11c5e0;
+$color-green: #21cec6;
+$color-red: #ff7674;
+$color-red-1: #ff0042;
+$color-yellow: #ffcf26;
+$color-orange: #ff9900;
+$color-grey: darken($color-white, 20%);
+$color-border: darken($color-white, 10%);
+$color-background: #fff;
+$color-background-1: darken($color-white, 4%);
+$color-background-2: #f8f9fb;
+$color-shadow: #cbd1ff;
+$color-shadow-1: #d8ddf1;
+$color-enter: #C8C8C8;
+$color-green-light: lighten(#21cec6, 50.8%);
+
+$style-border: 1px solid $color-border;
+
+$text-primary-color: #333;
+$text-gray-color: #666;
+$text-light-color: #999;
+$text-placeholder: #cfd1de;
+
+$doc-width: 1500;
+$win-width: 37.5rem;
+
+@function rem($px) {
+  @return $px * $win-width / $doc-width;
+}
+
+$status-height: rem(20);
+$head-height: rem(44);
+$foot-height: rem(60);
+$padding: rem(15);
+
+@mixin touch-background {
+  -webkit-tap-highlight-color: rgba(127, 221, 213, .2);
+}
+@mixin arrow($rotate: 45deg) {
+  border: solid 2px #c8c8cd;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  content: " ";
+  top: 50%;
+  position: absolute;
+  width: rem(10);
+  height: rem(10);
+  -webkit-transform: translateY(-50%) rotate($rotate);
+  transform: translateY(-50%) rotate($rotate);
+}

@@ -1,0 +1,138 @@
+@import "config";
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $color-background;
+  font-size: rem(14);
+  height: 100%;
+  color: $text-primary-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+div {
+  -webkit-tap-highlight-color: transparent;
+}
+span {
+  -webkit-tap-highlight-color: transparent;
+}
+del {
+  color: #CCCCCC;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  &::-webkit-input-placeholder {
+    color: $text-placeholder;
+  }
+  -webkit-tap-highlight-color: transparent;
+}
+
+textarea {
+  resize: none;
+  border: 0;
+  outline: 0;
+  &::-webkit-input-placeholder {
+    color: $text-placeholder;
+  }
+}
+
+ul li{
+  list-style: none;
+}
+
+.highcharts-credits {
+  display: none !important;
+}
+
+.blue {
+  color: $color-blue;
+}
+
+.orange {
+  color: $color-orange;
+}
+
+.blue-2 {
+  color: $color-blue-2;
+}
+
+.red {
+  color: $color-red_1;
+}
+
+.primary {
+  color: $text-primary-color;
+}
+
+.page {
+  padding-top: $head-height;
+}
+
+.board-title {
+  padding: rem(29) rem(30);
+  line-height: 1;
+  font-size: rem(32);
+  color: $text-primary-color;
+  background-color: $color-white;
+  background-size: rem(6) rem(30);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.icon-star {
+  color: $text-light-color;
+  &.on {
+    color: $color-blue-1;
+  }
+}
+
+.ios {
+  .app-head {
+    height: rem(128) !important;
+    padding-top: rem(40) !important;
+  }
+  .page {
+    padding-top: rem(128) !important;
+  }
+  .page2 {
+    padding-top: rem(442) !important;
+  }
+  .area-header {
+    height: rem(412) !important;;
+    padding-top: rem(132) !important;;
+  }
+  .home-block {
+    height: rem(480) !important;
+  }
+  .app-bar {
+    top: rem(128) !important;
+  }
+  .bar-page {
+    padding-top: rem(208) !important;
+  }
+  .bar-page2 {
+    padding-top: rem(236) !important;
+  }
+}
+.ellipsis{
+  overflow: hidden;/*内容超出后隐藏*/
+  text-overflow: ellipsis;/* 超出内容显示为省略号*/
+  white-space: nowrap;/*文本不进行换行*/
+  display: block !important;
+}
+
+/* mint-ui 样式修改 */
+.mint-switch-input:checked + .mint-switch-core {
+  background-color: $color-green!important;
+}
+.mint-switch-input:checked + .mint-switch-core {
+  border-color: $color-green!important;
+}
